@@ -1,0 +1,17 @@
+{
+  "test_roc_auc": 0.9313349544831027,
+  "test_pr_auc": 0.885763387341675,
+  "optimal_threshold": 0.3,
+  "feature_names": [
+    "recency_days",
+    "frequency",
+    "monetary_value",
+    "avg_order_value",
+    "support_ticket_count",
+    "unresolved_tickets",
+    "intervention_count",
+    "tenure_days",
+    "return_rate",
+    "plan_type_encoded"
+  ]
+}
