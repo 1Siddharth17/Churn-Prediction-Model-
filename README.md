@@ -4,7 +4,6 @@
 
 
 
-\---
 
 ## &#x20;Overview
 
@@ -19,7 +18,6 @@ Identify at-risk customers for proactive retention campaigns, maximizing ROI by 
 * ₹300K–₹500K annual retention value
 * 3–7x ROI on retention spend 
 
-\---
 
 ## &#x20;Quick Start
 
@@ -46,7 +44,6 @@ churn\_probs = model.predict\_proba(X\_scaled)\[:,1]
 is\_churner = (churn\_probs >= 0.40).astype(int)  # Use optimal threshold
 ```
 
-\---
 
 ## &#x20;Deliverables
 
@@ -129,7 +126,6 @@ StandardScaler fitted on training data (for consistent scaling at inference time
 |**False Negatives**|28%|Miss some churners (costly)|
 |**False Positives**|18%|Over-target \~1 in 5 (acceptable)|
 
-\---
 
 ## &#x20;Features Used (10 Inputs)
 
@@ -146,7 +142,6 @@ StandardScaler fitted on training data (for consistent scaling at inference time
 |**return\_rate**|0–1|% orders returned|High = dissatisfaction = risk|
 |**plan\_type\_encoded**|0–2|Account tier|Trial (0) = 65% churn; Premium (2) = 18%|
 
-\---
 
 ## &#x20;Leakage Prevention
 
@@ -170,7 +165,6 @@ StandardScaler fitted on training data (for consistent scaling at inference time
 
 **Result:** Model is valid for production; will work on new customers at inference time.
 
-\---
 
 ## &#x20;How Threshold Was Chosen
 
@@ -196,7 +190,6 @@ Lower threshold → catch more churners → acceptable false alarm rate
 
 **Selected: 0.40** — Balances retention capture with operational efficiency
 
-\---
 
 ## &#x20;Model Explainability (SHAP)
 
@@ -218,7 +211,6 @@ For a customer predicted as 60% likely to churn:
 * **Frequency (2 orders):** -5% churn probability (counteracts—low is bad, but not worst case)
 * **Base rate:** 43% → 60% final prediction ✓
 
-\---
 
 ## &#x20;Deployment Guide
 
@@ -291,7 +283,6 @@ roi = (len(retained) \* 2500) / (len(interventions) \* 500)
 print(f"Retention ROI: {roi:.1f}x")
 ```
 
-\---
 
 ## &#x20;Expected Business Results
 
@@ -312,7 +303,6 @@ print(f"Retention ROI: {roi:.1f}x")
 * **Net annual benefit:** ₹875K–₹1.13M
 * **Annual ROI:** 1.9–2.4x
 
-\---
 
 ## &#x20;Important Limitations
 
@@ -323,7 +313,6 @@ print(f"Retention ROI: {roi:.1f}x")
 5. **Seasonal Effects:** Trained on 2021–2024; seasonal patterns may shift
 6. **Feature Gaps:** Missing real-time engagement (email opens, app logins)
 
-\---
 
 ## &#x20;Retraining Schedule
 
@@ -335,7 +324,6 @@ print(f"Retention ROI: {roi:.1f}x")
 
 **Next Retraining:** 2024-09-30 (90 days post-launch)
 
-\---
 
 ## &#x20;Documentation
 
@@ -346,7 +334,6 @@ print(f"Retention ROI: {roi:.1f}x")
 |**requirements.txt**|Dependencies|Developers|
 |**README\_PART3.md**|This guide|Everyone|
 
-\---
 
 ## 
 
